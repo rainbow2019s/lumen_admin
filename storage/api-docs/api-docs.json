@@ -1,0 +1,65 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/v1/api/test/index/{id}?id={id223}": {
+            "get": {
+                "operationId": "App\\Http\\Controllers\\TestController::index",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "\u7528\u6237id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    },
+                    {
+                        "name": "id223",
+                        "in": "query",
+                        "description": "\u4e1a\u52a1id",
+                        "required": true,
+                        "schema": {
+                            "type": "number"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "result": {
+                                            "type": "string"
+                                        },
+                                        "code": {
+                                            "type": "string"
+                                        },
+                                        "msg": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "example": {
+                                        "result": "success",
+                                        "code": "1000",
+                                        "msg": "\u64cd\u4f5c\u6210\u529f",
+                                        "data": "[{$id,$name,...}]"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
